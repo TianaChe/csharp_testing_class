@@ -11,7 +11,7 @@ namespace  addressbook_web_tests
 
 {
     [TestFixture]
-    public class UntitledTestCase
+    public class GroupTestCase
     { 
         private IWebDriver driver;
         private StringBuilder verificationErrors;
@@ -22,7 +22,7 @@ namespace  addressbook_web_tests
         public void SetupTest()
         {
             driver = new FirefoxDriver();
-            baseURL = "http://localhost/addressbook";
+            baseURL = "http://localhost/addressbook/";
             verificationErrors = new StringBuilder();
         }
 
@@ -41,7 +41,7 @@ namespace  addressbook_web_tests
         }
 
         [Test]
-        public void TheUntitledTestCaseTest()
+        public void CreateGroup()
         {
             driver.Navigate().GoToUrl(baseURL);
             driver.FindElement(By.Name("user")).Clear();
