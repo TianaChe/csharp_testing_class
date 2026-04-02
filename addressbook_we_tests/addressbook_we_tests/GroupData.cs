@@ -8,29 +8,19 @@ namespace WebAddressbookTests
 {
     internal class GroupData
     {
-        private string name;
-        private string header = "";
-        private string footer = "";
-        public GroupData(string name)
-        { this.name = name; }
-
-        public string Name
+        public string Name {  get; private set; }
+        public string Header { get; private set; }
+       public string Footer { get; private set; }
+        public GroupData(string name, string header, string footer)
         {
-            get { return name; }
-            set { name = value; }
+            Name = name; 
+            Header = header;
+            Footer = footer;
+       
+     
         }
 
-        public string Header
-        {
-            get { return header; }
-            set { header = value; } 
-        }
-
-        public string Footer
-        {
-            get { return footer; }
-            set { footer = value; }
-        }
+        
 
     }
 
